@@ -156,3 +156,13 @@ body {
   right: 50px;
   top: -90px;
 }
+button {
+  position: relative;
+  top: 35px;
+}
+
+input {
+  outline: none !important;
+  border: none !important;
+  background-color: rgb(225, 222, 222) !important;
+}

@@ -5,10 +5,11 @@ import {
 } from "../../utils/storageUtils.js";
 import { createElementRepo } from "../../utils/domUtils.js";
 const ids = [];
+let userData = getFromLocalStorage("userData");
 const userDataShow = getFromLocalStorage("userData");
 const tbody = document.querySelector("tbody");
-userDataShow.forEach((user) => {
-  ids.push(user.id);
+userDataShow.forEach((user, index) => {
+  user.id = index;
   console.log(userDataShow);
   tbody.innerHTML += `
 <tr class="user">
@@ -26,7 +27,10 @@ userDataShow.forEach((user) => {
 tbody.addEventListener("click", (e) => {
   console.log(e.target.tagName);
   if (e.target.tagName === "BUTTON") {
-    getFromLocalStorage("userData");
-    console.log(e.target.parentElement.parentElement.children[0]);
+    const id = e.target.parentElement.parentElement.children[1].textContent;
+    const deleted = userData.splice(Number(id), 1);
+    saveToLocalStorage("userData", userData); // Save the updated array to local storage
+    console.log(userData);
+    e.target.parentElement.parentElement.remove();
   }
 });

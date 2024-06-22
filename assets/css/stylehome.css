@@ -1,0 +1,66 @@
+/* Add some basic styling to make the video as background */
+body {
+  margin: 0;
+  padding: 0;
+  height: 80vh;
+  width: 100vw;
+  /* overflow: hidden; */
+  overflow-x: hidden;
+  font-family: "Asap", Arial, Helvetica, sans-serif;
+}
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  transform: scale(1.1); /* add this */
+}
+.header {
+  position: relative;
+  z-index: 1;
+}
+.navbar {
+  background-color: #333 !important;
+}
+
+.a-innav {
+  color: #ffffff !important;
+}
+h1 {
+  font-size: 120px;
+  line-height: 150px;
+}
+h2 {
+  font-size: 80px;
+  line-height: 90px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.overflow {
+  overflow: hidden;
+}
+.col-lg-8,
+.col-xl-7 {
+  height: 100vh;
+}
+.container {
+  width: 1120px;
+  max-width: 1120px;
+}
+/*main-text*/
+.main-txt {
+  position: fixed;
+  text-transform: uppercase;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 2560px;
+  margin: 0px auto;
+  color: #fff;
+  z-index: 1;
+}

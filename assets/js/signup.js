@@ -111,6 +111,7 @@ formEle.addEventListener("submit", function getData(e) {
     };
     usersData.push(data); // push data to usersData array
     saveToLocalStorage("userData", usersData); // save usersData to local storage
+
     window.location.replace("../../pages/weather-app.html");
     inputs[0].value = "";
     inputs[1].value = "";

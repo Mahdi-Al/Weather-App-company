@@ -23,9 +23,31 @@ userDataShow.forEach((user, index) => {
 </tr>
 `;
 });
+// userData.forEach((user) => {
 
 tbody.addEventListener("click", (e) => {
-  console.log(e.target.tagName);
+  console.log(e.target.parentElement.parentElement.children[4].children[0]);
+  if (
+    e.target.parentElement.parentElement.children[0].textContent ===
+    "mahdialikhaniapr2005@gmail.com"
+  ) {
+    e.target.parentElement.parentElement.children[4].children[0].classList.add(
+      "disabled"
+    );
+    alert("You can not Delete the admins data ❌");
+    return;
+  }
+
+  if (
+    e.target.parentElement.parentElement.children[0].textContent ===
+    "Aghil@gmail.com"
+  ) {
+    e.target.parentElement.parentElement.children[4].children[0].classList.add(
+      "disabled"
+    );
+    alert("You can not Delete the admins data ❌");
+    return;
+  }
   if (e.target.tagName === "BUTTON") {
     const id = e.target.parentElement.parentElement.children[1].textContent;
     const deleted = userData.splice(Number(id), 1);
